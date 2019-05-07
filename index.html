@@ -1,0 +1,64 @@
+<!-- https://gist.github.com/nfreear/fd1005a2af7a8166862011b8fcb8a821 -->
+<!doctype html>
+<html>
+
+<head>
+  <title> Sound Map </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css">
+<!--   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.css" />
+  <link rel="stylesheet" href="css/L.Control.SlideMenu.css">
+  <link rel="stylesheet" href="css/Control.FullScreen.css">
+  <link href="css/style.css" type="text/css" rel=stylesheet>
+  <link rel="shortcut icon" href="/data/favicon.ico" >
+  <link rel="icon" type="image/gif" href="/data/animated_favicon1.gif" >
+</head>
+
+<body>
+  <div id="map"></div>
+
+  <div id="overlay" style="text-align: center">
+    <h1>S</br>O</br>U</br>N</br>D</br></br>M</br>A</br>P</h1>
+  </div>
+
+  <div class="menu">
+    <ul class="menu-options">
+      <b class="menu-title">Marker</b>
+      <li id="new-menu" class="menu-option">New</li>
+      <li id="edit-menu" class="menu-option">Edit</li>
+      <li id="cancel-menu" class="menu-option">Cancel</li>
+      <li id="save-menu" class="menu-option">Save</li>
+      <li id="delete-menu" class="menu-option">Delete</li>
+    </ul>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-storage.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-functions.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/leaflet.locatecontrol/dist/L.Control.Locate.min.js" charset="utf-8"></script>
+
+  <script src="js/default_geo_data.js"> </script>
+  <script src="js/soundmap.js"></script>
+  <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
+  <script src="js/L.Control.SlideMenu.js"></script>
+  <script src="js/Control.FullScreen.js"></script>
+  <script src="https://unpkg.com/leaflet-control-geocoder/dist/Control.Geocoder.js"></script>
+  <script src="js/nanobar.js"></script>
+
+</body>
+
+</html>
+
+
+

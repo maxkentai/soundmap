@@ -1,0 +1,393 @@
+body {
+    font: .92em sans-serif;
+    color: #333;
+    background: #fefefe;
+    max-width: 80em;
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2 {
+    font-weight: normal;
+    margin: 0.6em 0;
+}
+
+.leaflet-control-layers-toggle {
+    width: 30px !important;
+    height: 30px !important;
+}
+
+#overlay {
+    position: absolute;
+    z-index: 2147483647;
+    padding: 10px;
+    left: 20px;
+}
+
+#map {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.info {
+    background: #fff;
+    position: absolute;
+    width: 360px;
+    top: 10px;
+    right: 10px;
+    border-radius: 2px;
+}
+
+.info .item {
+    display: block;
+    border-bottom: 1px solid #eee;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.info .item small {
+    color: #888;
+}
+
+.info .item:hover,
+.info .item.active {
+    background: #f8f8f8;
+}
+
+.info .item:last-child {
+    border-bottom: none;
+}
+
+
+
+.tabs {
+    position: relative;
+    clear: both;
+    margin: 0 0;
+    transition: height 0.2s linear;
+    min-height: 90px;
+    max-height: 400px;
+    /* height: 400px; */
+}
+
+.tab {
+    float: left;
+    display: none;
+}
+
+.tab:first-of-type {
+    display: inline-block;
+}
+
+.tab:target {
+    display: block;
+}
+
+
+#popheader {
+    white-space: nowrap;
+}
+
+#title {
+    display: inline-block;
+    position: relative;
+    top: 0px;
+    width: 190px;
+    left: 10px;
+}
+
+.tabs-link {
+    display: inline-block;
+    position: relative;
+    top: -1px;
+    left: 0px;
+    padding: 0px;
+    margin: 10px;
+}
+
+
+.tab-link {
+    background: black;
+    padding: 2px;
+    display: inline;
+    margin-left: -1px;
+    position: relative;
+    list-style-type: none;
+    left: 1px;
+    top: 1px;
+    cursor: pointer;
+}
+
+
+.content {
+    color: white;
+    background: rgb(0, 0, 0);
+    position: absolute;
+    top: 40px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    overflow-y: scroll;
+}
+
+
+
+
+
+
+.leaflet-popup-content-wrapper {
+    padding: 1px;
+    text-align: left;
+    border-radius: 0px;
+    background-color: black;
+
+}
+
+.leaflet-popup-content {
+    margin: 1px;
+    line-height: 1.6;
+    color: white;
+}
+
+.leaflet-popup-tip {
+    background-color: black;
+}
+
+
+.popup-table {
+    width: 100%;
+}
+
+.popup-table-row {
+    background-color: grey;
+}
+
+audio {
+    height: 20px;
+    width: 300px;
+    position: relative;
+    top: 0px;
+    /* background-color: white; */
+}
+
+#testaudio {
+    position: absolute;
+    top: 100px;
+    z-index: 1000;
+    height: 20px;
+
+}
+
+#audio-selection {
+    position: relative;
+    left: 80px;
+    width: 120px;
+}
+
+button#delete-button {
+    position: relative;
+    left: 145px;
+    width: 50px;
+    display: none;
+}
+
+button#cancel-button {
+    position: fixed;
+    bottom: 2px;
+    right: 54px;
+    width: 50px;
+    display: none;
+}
+
+
+button#save-button {
+    position: fixed;
+    bottom: 2px;
+    right: 2px;
+    width: 50px;
+    display: none;
+}
+
+
+.menu {
+    width: 70px;
+    z-index: 1000;
+    box-shadow: 0 4px 5px 3px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    display: none;
+    transition: 0.2s display ease-in;
+}
+
+.menu,
+.menu-options {
+    list-style: none;
+}
+
+.menu,
+.menu-option {
+    font-weight: 500;
+    font-size: 14px;
+    padding: 0px 0px 0px 2px;
+    cursor: pointer;
+    background: #fff;
+}
+
+.menu-title {
+    position: relative;
+    left: 2px;
+}
+
+.menu-options {
+    font-weight: 500;
+    font-size: 14px;
+    padding: 0px 0px 0px 2px;
+    cursor: pointer;
+    background: #fff;
+    position: relative;
+    top: -10px;
+    margin-bottom: 0px;
+}
+
+.menu-option:hover {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.input-element {
+    background: black;
+    color: white;
+    width: 136px;
+    border: none;
+    font-size: 12px;
+    font: 12px/1.5 "Helvetica Neue", Arial, Helvetica, sans-serif;
+
+}
+
+input#time {
+    width: 90px;
+}
+
+#equipment {
+    width: 196px;
+}
+
+#location {
+    width: 239px;
+}
+
+#author {
+    width: 250px;
+}
+
+.input-element:focus {
+    outline-width: 0;
+}
+
+#description {
+    width: 295px;
+    height: 100px;
+    resize: none;
+
+}
+
+select,
+select option {
+    background-color: #f4f4f4;
+    margin: 5px 2px 2px 0;
+    padding-left: 20px;
+    border-left: 1px solid #c6c6c6;
+    color: black;
+}
+
+.clusterdiv {
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 100px;
+    width: 10px;
+    height: 10px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    margin-left: -10px;
+    margin-top: -10px;
+    text-align: center;
+}
+
+
+.leaflet-marker-icon {
+    background: none;
+    border: none;
+}
+
+.hide {
+    display: none;
+}
+
+/* Full-width inputs */
+input[type=email],
+input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+.btn {
+    background-color: black;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    font-size: 12px;
+}
+
+/* Add a hover effect for buttons */
+.btn:hover {
+    opacity: 0.8;
+}
+
+table,
+th,
+td {
+    width: 100%;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 4px;
+}
+
+td:hover {
+    /* th:hover also if you wish */
+    background: #eee;
+}
+
+/*
+tbody tr:nth-child(odd) {
+    background: #eee;
+  }
+  */
+
+.close-icon {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    transition: .3s ease;
+    z-index: 1000;
+}
+
+/* When you move the mouse over the icon, change color */
+.close-icon:hover {
+    color: rgb(127, 127, 127);
+}
