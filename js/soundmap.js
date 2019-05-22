@@ -1,6 +1,6 @@
 window.onload = function () {
 
-    var debug = false;
+    var debug = true;
 
     var OpenStreetMap_BlackAndWhite = L.tileLayer('https://tiles.wmflabs.org/bw-mapnik/{z}/{x}/{y}.png', {
         maxZoom: 18,
@@ -499,36 +499,39 @@ window.onload = function () {
             let h = 0;
             let vidH = 0;
 
-            if (typeof marker.feature.popupHeight === "undefined") {
-                // first time popup is opened. tab is main tab1
-                const els = L.DomUtil.get('tab1-content').children;
-                for (let i = 0; i < els.length; i++) {
-                    h += els[i].offsetHeight;
-                    if (debug) console.log(els[i], els[i].offsetHeight);
-                }
-
-                h += 50;
-                marker.feature.popupHeight = h;
-                if (debug) console.log("popupHeight", marker.feature.popupHeight);
+            // if (typeof marker.feature.popupHeight === "undefined") {
+            // first time popup is opened. tab is main tab1
+            const els = L.DomUtil.get('tab1-content').children;
+            for (let i = 0; i < els.length; i++) {
+                h += els[i].offsetHeight;
+                if (debug) console.log(els[i], els[i].offsetHeight);
             }
 
-            if (typeof marker.feature.properties.video != "undefined" && typeof marker.feature.popupHeightV === "undefined") {
+            if (h != 0) {
+                h += 50;
+                marker.feature.popupHeight = h;
+            }
+            if (debug) console.log("popupHeight: ", marker.feature.popupHeight);
+            // }
+
+            // if (typeof marker.feature.properties.video != "undefined" && typeof marker.feature.popupHeightV === "undefined") {
+            if (typeof marker.feature.properties.video != "undefined" ) {
                 vidH = L.DomUtil.get('videoPart').offsetHeight;
 
                 if (vidH != 0) { // video tab is open
                     vidH += 50;
                     marker.feature.popupHeightV = vidH;
-                    marker.feature.popupHeight = vidH;
+                    if (vidH > marker.feature.popupHeight) marker.feature.popupHeight = vidH;
                 } else {
-                    vidH = 400; // assume max height
+                    //vidH = 400; // assume max height
                 }
             }
 
-            if (vidH == 400) {
-                L.DomUtil.get('content').style.height = "400px";
-            } else {
+            // if (vidH == 400) {
+                // L.DomUtil.get('content').style.height = "400px";
+            // } else {
                 L.DomUtil.get('content').style.height = marker.feature.popupHeight + "px";
-            }
+            // }
 
 
             // if marker was dragged -> update the dom elements
